@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ProyecotMultiple</string>
+    <string-array name="producto_categoria">
+        <item>Ningun</item>
+        <item> 1 Pollo a la brasa</item>
+        <item> 1/2 Pollo a la brasa</item>
+        <item> 1/4 Pollo a la brasa</item>
+        <item> Porción de anticucho</item>
+        <item> Pechuga de pollo</item>
+    </string-array>
+</resources>
