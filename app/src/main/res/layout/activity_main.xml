@@ -15,6 +15,17 @@
         tools:layout_editor_absoluteX="1dp">
 
         <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#FF0F0F"
+            android:text="CASO 1"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Producto" />
@@ -122,5 +133,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="CASO 2" />
+
+        <Button
+            android:id="@+id/btnVentana3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="CASO 3" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -40,6 +40,16 @@ class SecondActivity : AppCompatActivity() {
         tvTasaMensual = findViewById(R.id.tvTasaMensual)
         tvCuotaMensual = findViewById(R.id.tvCuotaMensual)
         btnCalcular = findViewById(R.id.btnCalcular2)
+        var btnLimpiar = findViewById<Button>(R.id.btnLimpiar2)
+
+        btnLimpiar.setOnClickListener {
+            // Limpiar los EditText y TextView
+            edtPrecio.text.clear()
+            edtTasaAnual.text.clear()
+            edtTiempo.text.clear()
+            tvTasaMensual.text = ""
+            tvCuotaMensual.text = ""
+        }
 
         // convertir los valores a int y double
         val precio = edtPrecio.text.toString().toIntOrNull()
@@ -62,11 +72,11 @@ class SecondActivity : AppCompatActivity() {
                 if (chkDecimales.isChecked) {
                     // Respuesta con decimales (2 decimales)
                     tvCuotaMensual.text = "Cuota Mensual: %.2f".format(cuota_mensual)
-                    tvTasaMensual.text = "Tasa Mensual: %.4f".format(tasa_mensual, tasa_mensual * 100)
+                    tvTasaMensual.text = "Tasa Mensual: %.4f".format(tasa_mensual)
                 } else {
                     // Respuesta redondeada a enteros
                     tvCuotaMensual.text = "Cuota Mensual: ${cuota_mensual.toInt()}"
-                    tvTasaMensual.text = "Tasa Mensual: %.2f %%".format(tasa_mensual, tasa_mensual * 100)
+                    tvTasaMensual.append("\n%.2f %%".format(tasa_mensual * 100))
                 }
 
             }

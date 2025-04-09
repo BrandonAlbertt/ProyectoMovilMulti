@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        // ! boton para abrir la segunda actividad o pantalla
         // ! Busca el botón en el XML por su ID y lo guarda en una variable
         val btnVentana2 = findViewById<Button>(R.id.btnVentana2)
         // ! Cuando se hace clic en el botón...
@@ -43,6 +44,13 @@ class MainActivity : AppCompatActivity() {
             // ! Crea un "intento" para cambiar de pantalla (de esta actividad a SecondActivity)
             var intent = Intent(this, SecondActivity::class.java)
             // ! Inicia la nueva actividad (abre la segunda pantalla)
+            startActivity(intent)
+        }
+        // ! boton para abrir la tercera actividad o pantalla
+        // ! Busca el botón en el XML por su ID y lo guarda en una variable
+        var btnVentana3 = findViewById<Button>(R.id.btnVentana3)
+        btnVentana3.setOnClickListener {
+            var intent = Intent(this, TerceraActividad::class.java)
             startActivity(intent)
         }
 
@@ -55,6 +63,7 @@ class MainActivity : AppCompatActivity() {
         tvDescuento = findViewById(R.id.tvDescuento)
         tvTotalPagar = findViewById(R.id.tvTotalPagar)
         btnCalcular = findViewById(R.id.btnCalcular)
+
 
         btnCalcular.setOnClickListener {
             // Obtener el valor seleccionado del Spinner
